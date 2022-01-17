@@ -1,0 +1,318 @@
+
+
+
+/* Generic
+-----------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@200,400,600,700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400,500,600&amp;display=swap');
+
+body {font-family: 'Montserrat', sans-serif;color: var(--dark-txt-color)}
+
+:root {--dark-txt-color: #243343;--corail-fd-color: #DE7062}
+
+
+/* Pre-home Modale
+-----------------------------------------------------------------*/
+.modal__prehome-img {background-image:url('../images/fnh/Nicolas-Hulot-prehome.jpg');background-size: cover;background-position: center;height: 100%;width: 100%;;display: flex;justify-content: center;align-items: flex-end;padding-bottom: 40px;}
+.modal__ecoacteur {animation: open .7s;}
+.mfp-bg {animation: openFond 1s;}
+@keyframes open {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes openFond {
+    0%   {opacity: 0;}
+    100% {opacity: .8;}
+}
+
+#prehome .cta_btn-prehome {z-index: 999;background-color: var(--corail-fd-color);border-color: var(--corail-fd-color);}
+#prehome .cta_btn-prehome:hover {color: var(--corail-fd-color);background-color: #fff;}
+
+
+/* Header Sticky
+-----------------------------------------------------------------*/
+
+#header-fnh {background-color: #fff;height: 5vw;padding: 0 1vw 0 2vw;z-index:999;width:100%;position: fixed;top: 0;display: flex;align-items: center;}
+#header-fnh #logo-fnh {margin:0}	
+.logo-fnh img {max-width: 100%;width: 10.35vw;}
+#ecoacteur {float: left;padding-left: 3vw}
+#ecoacteur p {font-weight:400;font-size: 1.7vw;;text-transform: uppercase;display: inline;}
+
+#header-radio {margin-left:auto;display: flex;color:var(--dark-txt-color)}
+#header-radio > div {display: flex;align-items: center;margin-right:15px}
+#header-radio > div > label {margin: 0 0 0 1.6vw;padding-left: 15px;color: var(--dark-txt-color);font-family: inherit;  font-size:1.3vw;text-transform: none;letter-spacing: -.001rem}
+
+input[type="radio"].radio-style {display: none;}
+input[type="radio"].radio-style + label {position: relative;padding-left: 1.3rem;}
+input[type="radio"].radio-style + label::before,
+input[type="radio"].radio-style + label::after {content:'';display: block;position: absolute;box-sizing: border-box;bottom: 5px;left: -1.1vw;width: 1.5vw;height: 1.5vw;border-radius: 50%;}
+input[type="radio"].radio-style + label::before {border: 1px solid var(--dark-txt-color);background-color: #fff;}
+input[type="radio"].radio-style:checked + label::after {background-color: var(--dark-txt-color);}
+input[type="radio"].radio-style + label.radio-style-3-label::before, input[type="radio"].radio-style + label.radio-style-3-label::after {bottom: 1px;}
+#header-radio > div > label.radio-style-3-label {font-size: .8vw;line-height: 1.5vw;height: 1.6vw;width: 8vw;}
+label.radio-style-3-label h6 {font-size: 1.8vw;color: inherit;font-family: inherit; position: absolute;right: 0;top: -20%;}
+label.radio-style-3-label .filet-h {width: 6.2vw;background-color: #000;height: 1px;margin: 0;position: absolute;bottom: -.2vw;left: .8vw;}
+
+#header-fnh .cta_btn {width: 14.5vw;height: 3.4vw;padding: 0;}
+#header-fnh .cta_text, #header-fnh .cta_text b {font-size: .86vw;line-height: 3.4vw;}
+.cta_btn {
+		position: relative;
+		overflow: hidden;
+		display: block;
+		width: auto;
+		height: 63px;
+		padding:0 20px;
+		margin-left:0;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: inherit;
+		background-color: #B30C3D;
+		border:1px solid #B30C3D;
+		color: #fff;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;}  
+.cta_btn:hover {color: #B30C3D;border:1px solid #B30C3D ;background: #fff}
+.cta_text {line-height: 63px;font-size: .9rem;letter-spacing: .05rem;font-weight: 400;}
+.cta_text b {font-weight: 600;font-size:.96rem}
+
+		
+
+
+/* Slider
+-------------------------------------------------------------*/
+.full-screen {height:90vh;}
+.accueil .icon-angle-left::before, .accueil .icon-angle-right::before {color: #fff;font-size: 3rem}
+.accueil .slider-arrow-right {right: 0;left: auto;margin-right: 8%;top: 50%}
+.accueil .filet-nav {height:1px;width:25px;display: inline-block;background-color:#fff;right: 0;margin-right: 7.7%;top: 54%;position: absolute;z-index: 99;}
+.accueil .slider-arrow-left {right: 0;left: auto;margin-right: 8%;top: 58%;}
+.accueil .slider-arrow-left i, .accueil .slider-arrow-right i {text-align:right}
+.slide1 {background-image: url('../images/fnh/lp-ecoacteur-femme.jpg');background-position: center top;}
+.slide2 {background-image: url('../images/fnh/lp-ecoacteur.jpg');}
+.slide3 {background-image: url('../images/fnh/lp-ecoacteur-nicofoule.jpg');background-position: center;}
+
+/* Lien Video */
+#video {position: absolute;z-index: 99;bottom: 5%;padding-left: 4vw;}
+.video__lien {display:flex;align-items: center;}
+.video__lien::before {content: url('../images/fnh/video-play.png');padding-top: 5px;padding-right: 1vw;}
+.video__lien-txt {color: #fff;font-family: 'Montserrat', sans-serif;font-weight: 400;text-transform: uppercase;letter-spacing: 1px;font-size: 1.5rem;}
+/* Modale Video */
+#modal__video > div {max-height:80%;max-width: 80%;}
+#modal__video .text-center {padding:0}
+button.mfp-close {display: none;}
+#modal__video #bouton-close {position: absolute; left:90%; top: 0;z-index: 9999;background-color: var(--corail-fd-color);height: 80px; width:  80px;}
+button.modal-close {height: 80px; width:  80px;border: none;background-color: transparent;background-image: url('../images/fnh/close-icon.png');background-repeat:  no-repeat;background-position: center;background-size: 30px;transition: all 150ms;}
+.modal-close:hover {transform: rotate(90deg);transition: all 150ms;}
+
+/* Liens Reseaux */
+#slider__social  {position: absolute;top: 6.8vw;right: 20px;z-index: 99;width: 65px;}
+.slider__social {list-style: none;}
+.slider__social__link {width: 65px;height: 65px;display: inline-block;border-radius: 50%;text-align: center;}
+.slider__social__link svg {fill: #fff}
+.slider__social__link:hover svg {fill: var(--corail-fd-color);-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
+.slider__social li {margin: 0;height: 55px;}
+#partager {transform: rotate(-90deg) translateX(-100%);}
+#partager p {color: #fff;font-family: 'Montserrat', sans-serif;font-weight: 200;text-transform: uppercase;letter-spacing: 1px;font-size: .9rem;margin-bottom: 100px;width: 9rem;}
+
+
+
+/* Faites un don et devenez ecoacteur
+-------------------------------------------------------------*/
+#section__ecoacteur {display: flex;flex-direction: column;align-items: center;justify-content: center;height: 100%;min-width: 100%;width: 100%;background: linear-gradient(white 50%, var(--corail-fd-color) 50%);}
+#txt__ecoacteur {text-transform: uppercase;text-align:center;}
+#txt__ecoacteur.chapo {padding: 5% 0;}
+#txt__ecoacteur.chapo>* {color:var(--dark-txt-color);font-size:1.8rem;line-height:2.3rem;font-family: 'Montserrat', sans-serif;margin: 0}
+#txt__ecoacteur.chapo h2 {font-weight:700}
+#txt__ecoacteur.chapo h3 {font-weight:400}
+
+
+/* Photos Liens Modales */
+div#photos-liens {width: 95vw; display: flex;flex-direction: row;justify-content: center;}
+span.photo-lien {width: 320px;height: 400px;text-align: right;position: relative;-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .12);-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .12);box-shadow: 0 0 10px rgba(0, 0, 0, .12);margin: 1.3vw;}
+.photo-lien.agriculture {background-image:url('../images/fnh/agriculture.jpg');background-size: cover;background-position: bottom;background-repeat: no-repeat;}
+.photo-lien.transports {background-image:url('../images/fnh/transports.png');background-size: cover;background-position: bottom;background-repeat: no-repeat;}
+.photo-lien.climat {background-image:url('../images/fnh/climat2.png');background-size: cover;background-position: bottom;background-repeat: no-repeat;}
+.photos__lien-modal {background-image:linear-gradient(45deg, transparent 0 50%, white 50% 100%);height: 100px; width: 100px;display: inline-block;}
+
+/*Center the button*/
+.photos__lien-croix {position: absolute;margin: auto;height: 110%;width: 110%;top: -20px;right:-20px;transition: all 0.3s 0s;}
+  
+/*rotate plus sign to x sign*/
+  .photos__lien-croix:before {
+	transform: rotate(45deg) scale(0);
+  }
+  .photos__lien-croix:after {
+	transform: rotate(-45deg) scale(0);
+  }
+  .plus {
+	display: inline-block;
+	position: relative;
+	margin:auto;
+	width: 100px;
+	height: 100px;
+	border: 6px solid transparent;
+	transition: all 0.3s;
+  }
+  /*Plus sign*/
+  .plus:before {
+	content: '';
+	position: absolute;
+	border: 6px solid var(--dark-txt-color);
+	top:43px;
+	left: 28px;
+	width: 35px;
+	border-bottom: 20px;
+	margin: auto;
+	transition: all 0.3s;
+  }
+  
+  .plus:after {
+	content: '';
+	position: absolute;
+	border: 6px solid var(--dark-txt-color);
+	top: 28px;
+	left: 43px;
+	height: 35px;
+	border-left: 20px;
+	margin: auto;
+	transition: all 0.3s.1s;
+  }
+  
+  /*Rotate plus 45deg*/
+  .photos__lien-croix:hover .plus:before {
+	  transform: rotate(-45deg) scale(1);
+	transition: all 0.3s;
+  }
+  .photos__lien-croix:hover .plus:after {
+	  transform: rotate(-45deg) scale(1);
+	transition: all 0.3s;
+  }
+  
+  /*Rotate ouside circle 180 deg along x-axis*/
+  .photos__lien-croix:hover .plus {
+	transform: rotatex(180deg);
+	transition: all 0.3s;
+  }
+
+
+
+/* Modales ecoacteur */
+.mfp-inline-holder .mfp-content {width:90vw}
+.modal__ecoacteur > div {height:95vh;width: 90vw;}
+.modal__ecoacteur .text-center {padding:0;width: 100%; height: 100%;}
+.modal__ecoacteur #bouton-close {position: absolute; right:0; top: 0;z-index: 9999;background-color: var(--corail-fd-color);height: 130px; width:  130px;}
+.modal__ecoacteur #bouton-close button.modal-close {height: 130px; width:  130px;background-size: 50px}
+
+.modal__agriculture-img, .modal__transports-img, .modal__climat-img {background-size: cover;background-repeat: no-repeat;background-position: top left;height: 100%;width: 100%;}
+.modal__agriculture-img {background-image:url('../images/fnh/agriculture-modal.jpg');}
+.modal__transports-img {background-image:url('../images/fnh/transports-modal.jpg');}
+.modal__climat-img {background-image:url('../images/fnh/climat-modal2.png');}
+
+
+.modal__ecoacteur-txt {background-color: #fff;width:44rem;height: 100%;overflow: auto;padding-bottom: 3rem;position: absolute;top: 0;}
+.modal__ecoacteur-txt>*:not(p) {font-family: 'Montserrat', sans-serif;}
+.modal__ecoacteur-txt>*:not(h3) {padding: 0 5rem 0 4rem}
+.modal__ecoacteur-txt h1 {color: var(--corail-fd-color);font-size:5rem;font-weight: 800;text-transform: uppercase;margin-bottom: 0;padding: .5rem 5rem 0 3.75rem;line-height: 6.3rem;}
+.modal__ecoacteur-txt h2 {color: var(--dark-txt-color);font-size:1.1rem;font-weight: 600;margin-bottom: .6rem;}
+.modal__ecoacteur-txt h2.modal__ecoacteur-txt-chapo {padding-top: 3rem;padding-bottom: 1rem;}
+.modal__ecoacteur-txt h3 {font-family: 'Roboto', sans-serif;font-weight: 600;font-size: 1.3rem;line-height: 1.5rem;height: 5rem;text-align: center;background-color: var(--dark-txt-color);color: #fff;margin: 0;padding-top: 1.6rem;bottom: 2.5vh;position: fixed;width: 44rem;}
+#transports .modal__ecoacteur-txt h3 {padding-top: .9rem;}
+.modal__ecoacteur-txt p {font-family: 'Roboto', sans-serif;font-weight: 400;color: var(--dark-txt-color);font-size:1rem;margin-bottom: .7rem;}
+.modal__ecoacteur-txt p:last-of-type {margin-bottom: 5.2rem;}
+.modal__ecoacteur-txt p b {font-weight: 400;color: var(--corail-fd-color)}
+
+
+#txt__ecoacteur.accroche {padding: 4vh 0;}
+#txt__ecoacteur.accroche>* {color:#fff;font-size:1.6rem;font-family: 'Montserrat', sans-serif;margin: 0;text-transform: none;display: inline}
+#txt__ecoacteur.accroche h2 {font-weight:400}
+#txt__ecoacteur.accroche h3 {font-weight:700}
+.cta_btn.invert {background-color: #FFF;border:1px solid #B30C3D;color: #B30C3D;margin-left:0;}
+.cta_btn.invert:hover {color: #fff;border:1px solid #B30C3D ;background: #B30C3D}
+
+
+
+/* Nicolas Hulot
+-------------------------------------------------------------*/
+#section__hulot {display: flex;flex-direction: column;align-items: center;justify-content: stretch;min-width: 100%;width: 100%;background-color: var(--corail-fd-color);padding: 5% 0}
+#photo__hulot {width: 75vw;height: 29vw;background:url('../images/fnh/Nicolas-Hulot.jpg');background-size: contain;background-repeat: no-repeat;background-position: center;}
+span.txt__hulot {width: 80%;height: 100%;display: flex;justify-content: center;flex-direction: column;}
+.txt__hulot p {font-family: 'Roboto', sans-serif;color: #fff;font-size: 1.4vw;line-height: 2vw;width: 60%;padding-left: 5vw;padding-top: 1vw;font-style: italic;}
+.txt__hulot-right {text-align: right;}
+#txt__ecoacteur.hulot {padding: 5% 0;width:80%}
+#txt__ecoacteur.hulot>* {color:#fff;font-size:1.8rem;line-height:2.3rem;font-family: 'Montserrat', sans-serif;margin: 0}
+#txt__ecoacteur.hulot h2 {font-weight:700}
+#txt__ecoacteur.hulot h3 {font-weight:400}
+#hulot-radio {display: flex;width: 100%;justify-content: center;margin-bottom: 4%}
+#hulot-radio .choix {display: flex;flex-direction: column;width: 15vw;height: 150px;padding-top: 25px;}
+#hulot-radio .choix:last-child {width: 11vw;}
+#hulot-radio .choix > label {margin: 0;padding-left: 0;color:#fff;font-family: inherit;font-size:3vw;text-transform: none;letter-spacing: -.001rem; width: 100%;text-align: center;}
+input[type="radio"].radio-style-hulot {display: none;}
+input[type="radio"].radio-style-hulot + label {position: relative;padding-left: 1.3rem;}
+input[type="radio"].radio-style-hulot + label::before,
+input[type="radio"].radio-style-hulot + label::after {
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+	top: -25px;
+	left: 45%;
+	content:'';
+	width: 26px;
+	height: 26px; 
+	border-radius: 1rem;}
+input[type="radio"].radio-style-hulot + label::before {border: 1px solid #fff;background-color: var(--corail-fd-color);}
+input[type="radio"].radio-style-hulot:checked + label::after {background-color:  #fff;}
+.deduction {width: 100%;text-align: center;font-size: 1vw;font-family: 'roboto', sans-serif;color: #fff;line-height: 1.3vw;}
+#ligne-v {width: 1px;background-color: #fff;height: 8.2vw;}
+#hulot-radio .choix label.radio-style-2-label {font-size: 1.3vw;line-height: 1.5vw;padding-top: .9vw;}
+label.radio-style-2-label h6 {font-size: 3vw;font-family: 'Montserrat', sans-serif; color: #fff; position: absolute;right: 0;top: 0;}
+.filet-h {width: 65%;background-color: #fff;height: 1px;margin: .8vw auto;}
+
+/* Deductible
+-------------------------------------------------------------*/
+#section__deductible {display: flex;flex-direction: column;align-items: center;justify-content: stretch;min-width: 100%;width: 100%;background-color: #fff;padding-bottom: 7%}
+#txt__ecoacteur.deductible {padding: 4% 0 2% 0;}
+#txt__ecoacteur.deductible h2 {line-height:2rem;color: var(--dark-txt-color)}
+#cercles {display: flex;justify-content: center; width: 80%;padding-bottom:3%;}
+.circular-chart {display: block;margin: 10px auto;max-width: 80%;max-height: 140px;}
+.circle-bg {fill: none;stroke: var(--corail-fd-color);stroke-width: 3;opacity:.5;}
+.circle {fill: none;stroke-width: 3;}
+@keyframes progress {0% {stroke-dasharray: 0 100;}}
+.start {
+    -webkit-animation: progress 1s ease-out 300ms forwards;
+       -moz-animation: progress 1s ease-out 300ms forwards;
+        -ms-animation: progress 1s ease-out 300ms forwards;
+         -o-animation: progress 1s ease-out 300ms forwards;
+            animation: progress 1s ease-out 300ms forwards;
+}
+.circular-chart.corail .circle {stroke: var(--corail-fd-color);}
+.percentage {fill:var(--corail-fd-color);font-family: 'lato', sans-serif;font-size: .7rem;text-anchor: middle;font-weight: 600;}
+#cercles-col {width: 35%}
+#cercles-col p {text-align: center;font-family: 'Montserrat', sans-serif;color: var(--corail-fd-color);line-height: 1.3;padding-top:20px;}
+#cercles-col h7 {font-weight: 700;}
+#cercles-col h8 {font-weight: 400;font-size:.8rem;display: inherit;font-style: italic;margin-top: 3px;}
+#section__deductible .cta_btn {margin-left:0;}
+
+/* Footer
+-------------------------------------------------------------*/
+#footer {display: flex;justify-content: center;align-items: center;width: 100%;background-color: var(--dark-txt-color);height: 180px;border-top: none}
+
+.footer__social {display: flex;margin: 0 6vw 0 12vw;font-size: 35px;list-style: none;color: #fff;}
+.footer__social__link {color: var(--dark-txt-color);background-color: #fff;width: 65px;height: 65px;display: inline-block;border-radius: 50%;text-align: center;}
+.footer__social__link:hover {background-color: var(--corail-fd-color);-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
+.footer__social li {margin: 0 .5vw}
+.icon-facebook {font-size: 53px;padding-top: 1px;}
+.icon-twitter, .icon-instagram {padding-top: 6px;}
+
+#footer__txt {color: #fff;text-align: right;}
+#footer__txt a {color: #fff}
+#footer__txt a:hover {color: var(--corail-fd-color)}
+.hopening {margin-bottom: 0;}
+
+	/* Modales Mentions */
+	#mentions__txt {width: 100%;height: 100%;padding: 5% 17vw 5% 4vw;background-color: #fff;overflow: auto;}
+	#mentions__txt >* {font-family: "Montserrat", sans-serif;color: var(--dark-txt-color)}
+	#mentions__txt h1 {color: var(--corail-fd-color);text-transform: uppercase;margin-bottom: 40px;font-weight: 700; font-size: 3rem;line-height: 3rem;}
+	#mentions__txt h2 {margin-bottom: 10px;font-size:1.7rem;line-height: 2rem;}
+	#mentions__txt h3 {margin-top: 10px;font-size:1.2rem}
+	#mentions__txt p {font-size: 1rem;}

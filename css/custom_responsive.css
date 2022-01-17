@@ -1,0 +1,189 @@
+/*-------------------------------------------------------------*/
+/*						 MEDIA QUERIES 						   */
+/*-------------------------------------------------------------*/
+
+
+
+
+@media screen and (max-width:1205px){
+    .modal__prehome-img{
+        background-image:url(../images/fnh/Nicolas-Hulot-mobile-popup-min.png);
+        background-repeat:no-repeat;
+    }
+}
+
+
+/* Responsive DESKTOP
+-------------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+
+    /* Generic */
+    .resp-mobile {display: none!important;}
+    .resp-tablette {display: none!important;}
+    
+    
+}
+    
+    
+    
+/* Responsive TABLETTE
+-------------------------------------------------------------*/
+ @media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    /* Generic */
+    .resp-mobile {display: none!important;}
+
+    /* Slider
+        -----------------------------------*/
+    .accueil .slider-arrow-left {top: 88%;}
+    .accueil .filet-nav {top: 84%}
+    .accueil .slider-arrow-right {top: 80%;}
+    
+    
+    
+}
+    
+    
+
+/* Responsive MOBILE
+-------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+
+    /* Generic
+    ---------------------*/
+    .resp-tablette {display: none!important;}
+    .resp-desk {display: none!important;}
+
+
+        /* Pre-home
+         -----------------------------------*/
+        .modal__prehome-img {height: 100vh;}
+
+        /* Bouton mobile sticky
+         -----------------------------------*/
+            #cta_btn-mobile-sticky {z-index: 9;position: fixed;bottom: 0;left: 0;height: 10vh;width: 100vw;background-color: var(--corail-fd-color)}
+            #cta_btn-mobile-sticky .cta_text, #cta_btn-mobile-sticky .cta_text b {display: flex;justify-content: center;align-items: center;color: #fff;font-size:4.5vw;text-transform: uppercase;line-height:10vh;}
+            #cta_btn-mobile-sticky .cta_text::after {content:'+'; font-size: 13vw;position: absolute;right: 4.5vw;}
+
+        /* Modale boutons radio mobile
+        -----------------------------------*/
+            .mfp-content #modal__radio-mobile>* {background-color: var(--corail-fd-color);height: 100vh;display: flex;justify-content: flex-end;flex-direction: column;align-items: center;}
+            #modal__radio-mobile.modal__ecoacteur #bouton-close {width: 75px;height: 75px;background-color: #fff;}
+            #modal__radio-mobile.modal__ecoacteur #bouton-close button.modal-close {background-image: url('../images/fnh/close-icon-corail.png');height: 75px;width: 75px;background-size: 30px;}
+            #modal__radio-mobile #hulot-radio {margin: auto 0 40px 0;}
+            #modal__radio-mobile #hulot-radio .choix:last-child {width: 100%;}
+            #modal__radio-mobile #hulot-radio .choix label.radio-style-2-label {width: 100%;align-items: center;font-size: 5vw;padding-left: 0;}
+            #modal__radio-mobile .filet-h {width: 65vw;}
+            #modal__radio-mobile .cta_text, #modal__radio-mobile .cta_text b {font-size: 4.8vw}
+            #modal__radio-mobile .cta_btn.invert {margin: 0 0 8vh 0;width: 85%;}
+
+        /* Slider
+        -----------------------------------*/
+            #slider {height: 90vh; width: 100vw;}
+            .slide1 {background-image: url('../images/fnh/lp-ecoacteur-mobile-femme.jpg'); background-position: center;}
+            .slide2 {background-image: url('../images/fnh/lp-ecoacteur-mobile-homme.jpg'); background-position: center;}
+            .slide3 {background-image: url('../images/fnh/lp-ecoacteur-mobile-nico2.jpg'); background-position: center;}
+
+            /* Logo */
+            #logo-fnh-mobile {position: absolute;top: 25px; left: 22px;z-index: 99;width: 195px;}
+
+            /* Lien Video */
+            #video {bottom: 5%; left: 5%; width:100%; font-size: 1rem;padding:0}
+            .video__lien::before {content: '';margin-right: 10px;width: 60px;height: 60px;background-image: url('../images/fnh/video-play.png');background-size: 60px;background-repeat: no-repeat;background-position: center;margin-bottom: 1vh;}
+            .video__lien-txt {font-size: 1.2rem;padding-left: 0;}
+
+            /* Liens Reseaux */
+            #slider__social {top: 3.5vh;}
+            .slider__social__link svg {height: 30px;width: 30px;}
+            .slider__social li {margin: 0 1vw;height: 45px;}
+        
+        /* Ecoacteur
+        -----------------------------------*/
+            /* texte */
+            #txt__ecoacteur.chapo {padding: 11% 5% 8% 5%;}
+            #txt__ecoacteur.chapo > * {font-size: 1.4rem;line-height: 1.9rem;}
+            #txt__ecoacteur.accroche {padding: 2vh 10px 5.5vh 10px;}
+            #txt__ecoacteur.accroche > * {font-size: 1.35rem;line-height: 1.8rem;}
+
+            /* Photos-lien modales */
+            #section__ecoacteur {background: linear-gradient(white 25%, var(--corail-fd-color) 25%);}
+            div#photos-liens {flex-direction: column;align-items: center;}
+            span.photo-lien {margin: 4vh 10px;}
+            .photos__lien-croix {width: 100%;height: 100%;}
+            
+            /* Bouton cta */
+            .cta_btn {width: 90%;height: 82px;margin-bottom: 35px;}
+            .cta_text, .cta_text b {line-height: 82px;font-size: 4.8vw;}
+        
+            /* Modales */
+            .mfp-container {padding: 0;width: 100vw;}
+            .mfp-inline-holder .mfp-content {width:100%}
+            .modal__ecoacteur #bouton-close {width: 16vw;height: 16vw;}
+            .modal__ecoacteur #bouton-close button.modal-close {height: 16vw; width: 16vw;background-size: 6.4vw; }
+            .modal__ecoacteur > div {height: 100%; width: 100%;}
+            .modal__ecoacteur-txt {width: 100%;overflow: hidden;height: 100%;position: relative;}
+            .modal__ecoacteur-txt h3 {width: 100%;bottom: 0;}
+            .modal__agriculture-img, .modal__transports-img, .modal__climat-img {padding-bottom: 50vh;background-position: top;}
+            .modal__agriculture-img {background-image: url('../images/fnh/agriculture-modal-mobile.jpg')}
+            .modal__transports-img {background-image: url('../images/fnh/transports-modal-mobile.jpg')}
+            .modal__climat-img {background-image: url('../images/fnh/climat-modal-mobile2.png')}
+            .modal__ecoacteur-txt > :not(h3) {padding: 0 1.2rem 0 1.7rem;}
+            .modal__ecoacteur-txt h1 {font-size: 14vw;padding: .5rem 5rem 0 1.5rem;line-height: 17vw;}
+            .modal__ecoacteur-txt p {font-size: 1rem;margin-bottom: .7rem;line-height: 1.4rem;}
+            .modal__ecoacteur-txt p b {font-weight: 600;}
+            .modal__ecoacteur-txt p br {display: none;}
+            .modal__ecoacteur-txt h3 {padding: .9rem 1rem;font-size: 4.5vw;line-height: 6vw;}
+            .modal__ecoacteur-txt h2 {font-size: 1.2rem; line-height: 1.8rem;}
+
+
+
+         /* Nicolas Hulot
+        -----------------------------------*/
+            #photo__hulot { width: 100vw;min-height: 90vh;height: 150vw;background: url('../images/fnh/Nicolas-Hulot-mobile.jpg');background-repeat: no-repeat;background-size: cover;background-position: center;}
+            span.txt__hulot {width: 100%;justify-content: flex-start;padding-top: 5.5vw;}
+            .txt__hulot p {font-size: 4.8vw;line-height: 6vw;width: 100%;padding: 0 6vw;font-style: italic;} 
+            #txt__ecoacteur.hulot {padding: 10% 0;width: 95%;}    
+            #txt__ecoacteur.hulot > * {font-size: 4.6vw;line-height: 6.5vw;}
+            
+            /* Boutons radio */
+            #hulot-radio {flex-direction: column;width: 82vw;margin-bottom: 35px;}
+            #hulot-radio .choix {flex-direction: row;width: 100%;height: 18vw;padding-top: 0;}
+            .deduction {width: 100%;font-size: 3.95vw;line-height: 4.7vw; font-style: italic;display: flex;flex-direction: row;justify-content: center;align-items: center;}
+            #hulot-radio .choix > label {font-size: 8.5vw;display: flex;flex-direction: row;align-content: center;align-items: center;width:60vw;padding-left: 7.5vw;}
+            input[type="radio"].radio-style-hulot + label::before, input[type="radio"].radio-style-hulot + label::after {top: 7vw;left: 0;width: 4.2vw;height: 4.2vw;}
+            #ligne-v {width: 100%;height: 1px;}
+            #hulot-radio .choix:last-child {width: 60vw;}
+            #hulot-radio .choix label.radio-style-2-label {font-size: 4vw;line-height: 1.5vw; padding-top: 6vw;flex-direction: column;justify-content: center;align-items: start;width: 49vw;}
+            label.radio-style-2-label h6 {font-size: 8.5vw;top: 2.8vw;}
+            .filet-h {width: 31vw;margin: 5vw 0 0 0;}
+
+            /* Deductible
+            -----------------------------*/
+                /* Cercles */
+                #cercles {flex-direction: column;align-items: center;width: 100vw;}
+                #cercles-col {width: 100%;}
+                .circular-chart {width: 28vw;}
+                #txt__ecoacteur.deductible {padding: 12% 0 2% 0;}
+                #cercles-col h7 {font-size: 4.8vw;}
+                #cercles-col h8 {font-size: 4vw;padding: 0 15vw;}
+
+            /* Footer
+            -----------------------------*/
+                #footer {flex-direction: column;padding: 4vh 0 15vh 3vh;height: 100%;align-items: flex-start;}
+                .footer__social {margin: 0;}
+                #footer__txt {text-align: left;font-size: 3.8vw;}
+                #footer-logo2 {padding-bottom: 7vh;}
+                .footer__social__link {width: 35px;height: 35px;}
+                .footer__social {font-size: 23px;margin-bottom: 2vh;}
+                .icon-twitter, .icon-instagram {padding-top: 0;}
+                .icon-facebook {font-size: 28px;}
+            
+
+}
+
+
+@media screen and (max-width:575px){
+    .modal__prehome-img{
+        height: 85vh !important;
+    }
+}
